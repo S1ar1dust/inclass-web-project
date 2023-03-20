@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6 - A simple form</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        *, ::after, ::before {
+            box-sizing: inherit;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .rightSide {
+           float: right; 
+        }
+
+        body {
+            margin: 0;
+        }
+
+        nav {
+            padding-left: 1%;
+            font-size: 12px;
+            border-bottom: 2px solid rgb(219, 219, 247);
+        }
+
+        nav > ul {
+            margin: 1%;
+            list-style: none;
+            padding-left: 0;
+            float: left;
+        }
+
+        nav li {
+            padding: 0 5px;
+            display: inline;;
+        }
+
+        nav > ul > li > a {
+            color:blue;
+            text-decoration: none;
+        }    
+
+        main {
+            background-color: rgb(230, 231, 250);
+            padding: 26px 0;
+        }
+
+        .content {
+            margin: 0 12%;
+            display: flex;
+            flex-flow: row nowrap;
+            column-gap: 3%;
+        }
+
+        .mainMenu {
+            font-size: 12px;
+            padding: 1% 2%;
+            width: 28%;
+            display: flex;
+            flex-flow: column nowrap;
+            background-color: white;
+            border-radius: 1.5rem;
+            border: 1px solid lightgray;
+        }
+
+        .mainMenu > ul {
+            margin: 0;
+            list-style: none;
+        }
+
+        .mainMenu > ul > li> a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .Form {
+            font-size: 14PX;
+            width: 70%;
+            padding: 2% 4%;
+            display: flex;
+            flex-flow: column nowrap;
+            background-color: white;
+            border-radius: 1.5rem;
+            border: 1px solid lightgray;
+        }
+
+        .Form > h1 {
+            padding-bottom: 2%;
+            border-bottom: 2px solid blue;
+            margin-bottom: 0%;
+        }
+
+        .Form > h4 {
+            margin: 4% 0 3% 0;
+        }
+
+        .name {
+            padding: 1% 2%;
+            border-radius: 0.125rem;
+            border: 1px solid lightgray;
+        }
+
+        .username {
+            padding: 1% 2%;
+            border-radius: 0.125rem;
+            border: 1px solid lightgray;
+        }
+
+        .username:valid {
+            border: 1px solid rgb(12, 214, 56);
+        }
+
+        .username:invalid ~ .validUsr {
+            display: none;
+        }
+
+        .validUsr {
+            margin: 1% 0 0 0;
+            font-size: 10px;
+            color: rgb(12, 214, 56);
+        }
+
+        .username:invalid {
+            border: 1px solid red;
+        }
+
+        .username:valid ~ .invalidUsr {
+            display: none;
+        }
+     
+        .invalidUsr {
+            margin: 1% 0 0 0;
+            font-size: 10px;
+            color: red;
+        }
+
+        .YorN {
+            font-size: 14px;
+        }
+
+        .YorN > input{
+            width: 10px;
+            line-height: 5px;
+        }
+
+        .email {
+            padding: 1% 2%;
+            border-radius: 0.125rem;
+            border: 1px solid lightgray;  
+        }
+
+        .email:valid {
+            border: 1px solid rgb(12, 214, 56);
+        }
+
+        .email:invalid ~ .validEml {
+            display: none;
+        }
+
+        .validEml {
+            margin: 1% 0 0 0;
+            font-size: 10px;
+            color: rgb(12, 214, 56);
+        }
+
+        .email:invalid  {
+            border: 1px solid red;
+        }
+
+        .email:valid ~ .invalidEml{
+            display: none;
+        }
+     
+        .invalidEml {
+            margin: 1% 0 0 0;
+            font-size: 10px;
+            color: red;
+        }
+
+        .messgnTxt {
+            padding: 2%;
+        }
+
+        .agreement {
+            padding-top: 3%;
+            font-size: 12px;
+        }
+
+        .bluText {
+            color: blue;
+        }
+
+        #buttons {
+            padding: 3% 0 4% 0;
+        }
+
+        .submit {
+            padding: 8px 12px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 0.25rem;
+        }
+
+        .cancel {
+            padding: 8px 12px;
+            color: blue;
+            background-color: rgb(230, 228, 228);
+            border: none;
+            border-radius: 0.25rem;
+            margin-left: 1%;
+        }
+
+        footer {
+            background-color: black;
+            color: rgb(191, 175, 223);
+            text-align: center;
+            padding: 22px 0 10px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="clearfix">
+        <ul>
+            <li><strong>Jared Esquivel</strong></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Conact Us</a></li>   
+        </ul>
+
+        <ul class="rightSide">
+            <li><a href="">Sign in</a></li>
+            <li><a href="">Sign up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content">
+            <div class="mainMenu">
+                <h2>Main menu</h2>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About us</a></li>
+                </ul>
+    
+                <h2>Featured projects</h2>
+                <ul>
+                    <li><a href="">Project A</a></li>
+                    <li><a href="">Project B</a></li>
+                    <li><a href="">Project C</a></li>
+                    <li><a href="">Project D</a></li>
+                    <li><a href="">Project F</a></li>
+                    <li><a href="">Project G</a></li>
+                </ul>
+            </div>
+    
+            <form method="post" action="./information.php" class="Form">
+                <h1>Contact Us Form</h1>
+    
+                <h4>Name</h4>
+                <input type="text" placeholder="Type name here" class="name" required>
+    
+                <h4>Username</h4>
+                <input type="text" placeholder="Text input" class="username" required>
+                <p class="validUsr">This username is available</p>
+                <p class="invalidUsr">This username isn't available</p>
+                
+                <h4>Are you a member?</h4>
+                <div class="YorN">
+                    <input type="radio" name="question" required>
+                    <label>Yes</label>
+                
+                        <input type="radio" name="question">
+                        <label>No</label>
+                </div>
+
+                <h4>Email</h4>
+                <input type="text" placeholder="Email input" class="email" required>
+                <p class="validEml">This email is valid</p>
+                <p class="invalidEml">This email is invalid</p>
+                
+                <h4>Message</h4>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Textarea" class="messgnTxt"></textarea>
+    
+                <div class="agreement">
+                    <input type = "checkbox" required>
+                    <label><strong>I agree to the <span class="bluText">terms and conditions</span></strong></label>
+                </div>    
+    
+                <div id="buttons">
+                    <button class="submit">Submit</button>
+                    <button class="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>&copy; 2021 - CS 2350 - All rights reserved</footer>
+</body>
+</html>

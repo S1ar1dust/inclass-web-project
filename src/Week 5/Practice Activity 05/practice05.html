@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 05</title>
+
+    <style>
+
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        *, ::after, ::before {
+            box-sizing: inherit;
+        }
+
+        body{
+            margin: 0%;
+            border: 1px solid gray;
+            height: auto;
+
+        }
+
+        nav {
+            border-bottom: 1px solid gray;
+        }
+
+        nav > ul {
+            margin: 1%;
+            list-style: none;
+            padding-left: 0;
+            float: left;
+        }
+
+        nav li {
+            padding: 0 4px;
+            display: inline;;
+        }
+
+        nav > ul > li > a {
+            color:coral;
+            text-decoration: none;
+        }
+
+        article {
+            margin: 0 10%;
+        }
+
+        .Col1, .Col2, .Col3 {
+            font-size: small;
+            padding: 1%;
+            color: white;
+        }
+
+        .wrapper {
+            overflow: hidden;
+        }
+
+        .wrapper  .Col1,  .Col2,  .Col3 {
+            float: left;
+            padding-bottom: 9999999px;
+            margin-bottom: -9999999px;
+        }
+
+        .Col1, .Col3 {
+            width: 25%;
+            background-color: gray;
+        }
+
+        .Col2 {
+            width: 50%;
+            background-color: black;
+        }
+
+        .textBall{
+            font-size:x-large;
+            text-align: center;
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin: .5rem;
+            border-radius: 75px;
+            background-color: black;
+            color: white;
+            line-height: 150px;
+        }
+
+        footer {
+            margin-top: 2%;
+            border-top: 1px solid gray;
+        }
+
+        footer > ul {
+            margin: 1%;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        footer li {
+            display: inline;
+        }
+
+        .red-Text {
+            color: lightcoral;
+        }
+
+        .image1 {
+            width: 35%;
+            padding: 8px;
+            float: left;
+            border-radius: 1rem;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .rightSide {
+           float: right; 
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav class="clearfix">
+            <ul>
+                <li><strong>Floated menus: </strong></li>
+                <li><a href="">One</a></li>
+                <li><a href="">Two</a></li>
+            </ul>
+
+            <ul class="rightSide">
+                <li><a href="">Three</a></li>
+                <li><a href="">Four</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2><span class="red-Text">&#60;Article 1&#62;:</span> Wrapping text around an image</h2>
+
+            <img class="image1" src="https://images.unsplash.com/photo-1561457013-a8b23513739a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=955&q=80"
+             alt="A top view image of Venice">
+            <h3>A secondary heading</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto repellendus in voluptatum sed consectetur cum possimus at, eius odio commodi 
+                inventore, eveniet ex voluptatem. Enim sunt delectus laboriosam non ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae dolor 
+                nemo tenetur sunt officiis ullam impedit optio saepe, dolorem perspiciatis laudantium, corrupti quod non hic odit dignissimos eligendi, 
+                facilis rerum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam voluptatum voluptates voluptatibus, quo expedita 
+                necessitatibus. Accusantium neque iusto perspiciatis atque delectus assumenda, modi repellendus enim facere aut earum sit. Illum! Lorem ipsum 
+                dolor sit amet consectetur adipisicing elit. Voluptatibus optio pariatur possimus eaque tempora provident dignissimos molestiae culpa illo 
+                illum! Natus facilis a magnam autem. Excepturi inventore magni id eligendi? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nostrum ipsa placeat eveniet enim rerum omnis autem dolore hic laudantium ipsam explicabo, magni, animi vero deleniti perferendis delectus 
+                nam quam voluptates!</p>
+        </article>
+
+        <article class="clearfix">
+            <h2><span class="red-Text">&#60;Article 2&#62;:</span> Centering text vertically</h2>
+
+            <div class="textBall">Selectors</div>
+            <div class="textBall">Inheritance</div>
+            <div class="textBall">Cascade</div>
+            <div class="textBall">Specificity</div>
+        </article>
+
+        <article class="wrapper clearfix">
+            <h2><span class="red-Text">&#60;Article 3&#62;:</span> Equal-height columns</h2>
+
+                <div class="Col1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, repudiandae. Consequuntur et, laudantium ut architecto sit aperiam modi a nobis. Eaque necessitatibus illum eum harum officiis perferendis, nihil sint sunt!</div>
+                <div class="Col2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe adipisci excepturi odit numquam repudiandae ex nobis, debitis officiis accusantium eos exercitationem consequatur rerum, dolore quas dolores voluptatibus optio repellat! Praesentium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus minima similique dolores, officiis ducimus asperiores obcaecati enim velit necessitatibus consectetur non sunt ipsum quae sequi atque labore porro amet dolore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea debitis? Voluptatum minima voluptatibus nisi quam, nesciunt ducimus excepturi odio in commodi possimus illum sit iste reprehenderit enim aperiam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolore sed recusandae eligendi voluptatum aut ducimus ea iure porro nemo nostrum eius, quam veniam similique, aliquid necessitatibus maiores tenetur! Atque!</div>
+                <div class="Col3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, ipsam harum nihil vel quos porro blanditiis facilis voluptatem id voluptatum a? Tempora quaerat cupiditate facilis quasi ipsam, modi non nihil.</div>
+        </article>
+
+        <footer>
+            <ul>
+                <li><strong>Jared Esquivel</strong></li>
+                <li class="rightSide">&copy; All rights reserved</li>
+            </ul>
+        </footer>
+    </main>  
+</body>
+</html>

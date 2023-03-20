@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Feeding Simulator</title>
+
+    <style>
+        body  {
+            background-color: darkgray;
+            /*background-image: url(../../images/Kitten.jpg);*/
+        }
+
+        div {
+            display: flex;
+        }
+
+        canvas {
+            flex-flow: row;
+            background-color: blanchedalmond;
+            margin: 5px;
+        }
+
+        form {
+            background-color: rgb(230, 207, 154);
+            margin: 5px;
+            width: 100%;
+            flex-flow: row;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <canvas width="1500" height="944">
+
+        </canvas>
+        <form action="">
+            <h1>Controls</h1>
+            <label for="x">Use this slider to control the yarn ball:</label>
+            <input id="x" type="range" min="20" max="1480" value="400"> <br><br>
+
+            <label for="c">Use this color selector to change the color of the cat:</label>
+            <input id="c" type="color" value="#FFA500"> <br><br>
+
+            <label for="cat">Use this slider to move the cat on the screen:</label>
+            <input id="cat" type="range" min="36" max="1250"> <br><br>
+            <label for="c">Use this color selector to change the color of the cat's text:</label> <br>
+            <input id="textColor" type="color"> <br><br>
+
+            <label for="c">Input what you want the cat to say:</label>
+            <textarea id="meow" cols="44" rows="10" placeholder="Input text here"></textarea>
+        </form>
+        <script src="../../javascripts/Assignment 7.js"></script>
+    </div>
+</body>
+</html>

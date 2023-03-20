@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+
+    <style>
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        *, ::after, ::before {
+            box-sizing: inherit;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .rightSide {
+           float: right; 
+        }
+
+        body {
+            margin: 0%;
+        }
+
+        nav {
+            background-color: lightgray;
+        }
+
+        nav > ul {
+            padding: 0 4px;
+            list-style: none;
+            float: left;
+        }
+
+        nav li { 
+            padding: 5px;
+            font-size: 14px;
+            display: inline;         
+        }
+
+        nav > ul > li > a {
+            color: coral;
+            text-decoration: none;
+        }
+
+        nav > ul > li > a:hover {
+            text-underline-offset: 6px;
+            text-decoration: underline 2px coral;
+        }
+
+        nav > ul > li > strong > small {
+            color:rgb(88, 88, 88);
+        }
+
+        .A1 {
+            margin: 0 13%;
+            border-bottom: 1px solid gray;
+        }
+
+        .youtube-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .youtube-embed iframe {
+            position: absolute;
+            border: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .A2 {
+            margin: 0 13%;     
+        }
+
+        .Cards {
+           display: table;
+           border-spacing: 15px 0;
+        }
+
+        .BCNP {
+            font-size: 12px;
+            width: 33%;
+            padding: 170px 10px 0 10px;
+            border: 1px solid lightgray;
+            background-image: url(https://images.unsplash.com/photo-1437240443155-612416af4d5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+            background-repeat: no-repeat;
+            background-size: 100% 175px;
+            display: table-cell;
+        }
+
+        .BCNP > p {
+            color: gray;
+        }
+
+        .ZNP {
+            font-size: 12px;
+            width: 33%;
+            padding: 170px 10px 0 10px;
+            border: 1px solid lightgray;
+            background-image: url(https://images.unsplash.com/photo-1474401915596-3c5adf84ef01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+            background-repeat: no-repeat;
+            background-size: auto 175px;
+            display: table-cell;
+        }
+
+        .ZNP > p {
+            color: gray;
+        }
+
+        .ANP {
+            font-size: 12px;
+            width: 33%;
+            padding: 170px 10px 0 10px;
+            border: 1px solid lightgray;
+            background-image: url(https://images.unsplash.com/photo-1614484564972-e37b65b5a573?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+            background-repeat: no-repeat;
+            background-size: auto 175px;
+            display: table-cell;
+        }
+        
+        .ANP > p {
+            color: gray;
+        }
+
+        .links {
+            background-color:rgb(88, 88, 88);
+        }
+
+        .links > ul {
+            padding-left: 8px;
+            padding-right: 17%;
+            font-size: 14px;
+            list-style: none;
+            display: inline-block;
+            
+        }
+
+        .colName {
+            padding-right: 1%;
+            color: white;
+        }
+
+        .links > ul > li > a {
+            font-size: 12px;
+            padding-left: 14px;
+            color: coral ;
+            text-decoration: none;
+            text-align: right;
+        }
+
+        footer {
+            margin: 0 18%;
+        }
+
+        footer > ul {
+            text-decoration: none;    
+            padding: 0;
+            float: left;
+        }
+
+        footer li {
+            font-size: 12px;
+            display: inline;
+        }
+
+        footer > ul > li > a {
+            color: coral;
+            text-decoration: none;
+        }
+
+        .button {
+            font-size: 14px;
+            padding: 0 2%;
+            width: auto;
+            height: 40px;
+            margin: .5rem;
+            border-radius: 0.25rem;
+            float: left;
+            text-align: center;
+            color: white;
+            background-color: coral;
+        }
+
+        .article1Btns .button {
+            line-height: 40px;
+        }
+
+        .lbPos {
+            margin: 0 41%;
+            line-height: 40px;
+        }
+
+        .longButton {
+            font-size: 14px;
+            padding: 0 6%;
+            width: auto;
+            height: 40px;
+            margin: 0.5rem;
+            display: block;
+            border-radius: 0.25rem;
+            text-align: center;
+            color: white;
+            background-color: coral;
+        }
+
+        .lbPos > a {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav class="clearfix">
+            <ul>
+                <li><strong><small>Utah Mighty </small>FIVE</strong></li>
+                <li><a href="">One</a></li>
+                <li><a href="">Two</a></li>
+                <li><a href="">Three</a></li>
+                <li><a href="">Four</a></li>
+                <li><a href="">Five</a></li>
+            </ul>
+
+            <ul class="rightSide">
+                <li><a href="">Account</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+        
+        <article class="A1">
+            <h1>Close Your Eyes and Open Your Mind</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est iusto, deleniti suscipit
+                autem aperiam perspiciatis soluta unde! Perferendis id enim iusto explicabo praesentium
+                molestias excepturi beatae. Magni, earum dolor!
+            </p>
+
+            <div class="article1Btns">
+                <a class="button" href="">Take a Tour</a>
+                <a class="button" href="">Start a free trial</a>
+            </div>
+            
+
+            <div class="youtube-embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iKJ-TuDl8h0" 
+                        title="The Mighty 5 | An Adventure Through Utah's National Parks"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+            
+        </article>
+
+        <article class="A2">
+            <h1>What are they?</h1>
+
+            <div class="Cards">
+                <div class="BCNP">
+                    <h1>Bryce Canyon National Park</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam exercitationem 
+                        dignissimos natus eius assumenda eaque quod beatae a molestiae facere ducimus vero 
+                        cupiditate dolorum quisquam, totam iste quos debitis impedit! Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Enim ab dolorum optio, adipisci sit ipsam nisi aliquam 
+                        architecto mollitia provident vel, odit illo. Eum aperiam provident quasi. Quibusdam, 
+                        illo exercitationem!
+                    </p>
+                </div>
+    
+                <div class="ZNP">
+                    <h1>Zion National Park</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse accusamus neque tempore 
+                        illum? Dolorum temporibus porro eius ducimus iusto consectetur amet corrupti animi nisi! 
+                        Illum quibusdam laborum a aperiam quas? Lorem ipsum dolor, sit amet consectetur adipisicing 
+                        elit. Sequi, doloremque? Ex, neque nihil. Maiores eos ipsam laudantium reiciendis quisquam 
+                        voluptas. Molestias sapiente debitis perspiciatis quod? Similique repellendus 
+                        commodi temporibus quae.
+                    </p>
+                </div>
+    
+                <div class="ANP">
+                    <h1>Arches National Park</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam non voluptate dignissimos modi, 
+                        dolore vitae, quod minus optio rem harum sapiente. Exercitationem, rem repudiandae harum 
+                        blanditiis sed reiciendis facilis officiis? Lorem ipsum dolor sit amet consectetur adipisicing 
+                        elit. Modi reiciendis harum magni saepe dolore dolores culpa ea laborum maiores quis magnam, 
+                        delectus expedita distinctio impedit optio dicta odit laudantium non.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <div class="lbPos clearfix">
+            <a class="longButton" href="">Remaining two</a>
+        </div>
+
+        <div class="links">  
+            <ul>
+                <li class="colName"><strong>Offices</strong></li>
+                <li><a href="">One</a></li>
+                <li><a href="">Two</a></li>
+                <li><a href="">Three</a></li>
+                <li><a href="">Four</a></li>
+            </ul>
+            
+            <ul>
+                <li class="colName"><strong>Links</strong></li>
+                <li><a href="">One</a></li>
+                <li><a href="">Two</a></li>
+                <li><a href="">Three</a></li>
+                <li><a href="">Four</a></li>
+            </ul>
+
+            <ul>
+                <li class="colName"><strong>Contact</strong></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Pinterest</a></li>
+            </ul>
+
+            <ul>
+                <li class="colName"><strong>Locations</strong></li>
+                <li><a href="">One</a></li>
+                <li><a href="">Two</a></li>
+                <li><a href="">Three</a></li>
+                <li><a href="">Four</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <ul>
+                <li><a href="">Legal</a></li>
+                <li><a href="">Partner</a></li>
+                <li><a href="">Explore</a></li>     
+            </ul>
+
+            <ul class="rightSide">
+                <li><strong>&copy; All rights reserved</strong></li>
+            </ul>
+        </footer>
+    </main> 
+</body>
+</html>

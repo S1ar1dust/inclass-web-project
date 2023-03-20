@@ -1,0 +1,23 @@
+Block Elements:
+1.) <header>
+2.) <main>
+3.) <section>
+4.) <hr>
+5.) <p>
+6.) <aside>
+7.) <article>
+8.) <nav>
+9.) <footer>
+10.) <ul>
+11.) <li>
+12.) <div>
+
+Inline Elements:
+1.) <br>
+2.) <img>
+3.) <a>
+4.) <strong>
+5.) <em>
+6.) <s>
+7.) <mark>
+8.) <b>

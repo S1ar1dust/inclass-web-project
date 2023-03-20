@@ -1,0 +1,16 @@
+HTML is a markup language that is often used to structure and present information on web pages. The version HTML5 was the
+last major update to the HTML language. This change was made to make sure that language can be easily read and understood
+by people and to be used on computers with backwards compatibility for older versions of HTML. But this change also have a
+syntax for being able to add videos and sound with ease to a web page. In addition HTML5 was also though out to use weaker
+devices and allowed for cross-platform support with devices such as smartphones.
+
+CSS3 is a language that is use to for the layout and formatting of web page. This language was created to simplify the
+HTML markup as any details on the web page such as borders, font colors, etc. would be written in to the HTML file. In
+addition to making the HTML markup more simple this was also done make web pages more easy to maintain as the simplification
+made it easier to read and adjust elements on the web page.
+
+JavaScript is a programming language that is to develop websites and this is done with a few other languages such as
+CSS and HTML. JavaScript is the one of the main languages used for web page development and is supported by every major web
+browser such as Google chrome, Safari, and Internet Explorer. JavaScript is a high-level programming language with useful
+features such as support for application programming interfaces also known as APIs which helps with the standard data
+structures, text, and dates on a given application or web page.

@@ -1,0 +1,19 @@
+body {
+    width: 80%;
+    margin: 80% auto 1rem;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    border: 1px solid lightgray;
+    padding: .5rem;
+    border-radius: 1rem;
+    flex-flow: column nowrap;
+}
+
+.gallery > .top {
+    display: flex;
+    flex-flow: row nowrap;
+
+}

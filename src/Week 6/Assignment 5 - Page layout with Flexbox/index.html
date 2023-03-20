@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <style>
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        *, ::after, ::before {
+            box-sizing: inherit;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Mobile screen view*/
+        @media all and (min-width: 500px) {
+            body {
+                margin: 0;
+            }
+
+            hr {
+                border: 1px solid rgb(228, 228, 228);
+                margin: 2% 0;
+            }
+
+            .top {
+                border-bottom: 2px solid rgb(228, 228, 228);
+            }
+
+            .top > .name {
+                padding: 0 2%;
+            }
+
+            .searchbar > input {
+                display: none;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .posts {
+                display: flex;
+            }
+
+            .posts > .left {
+                padding-top: 2%;
+                margin: 0 5%;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+
+            .postImage {
+                width: 100%;
+                height: 350px;
+                border-radius: 1rem;
+            }
+
+            .postInfo > h1 {
+                color: gray;
+                margin: 2% 0 0 0;
+            }
+
+            .authorInfo {
+                color: gray;
+                margin: 2% 0;
+            }
+
+            .button {
+                display: none;
+            }
+
+            .posts > .right {
+                display: none;
+            }
+
+            footer {
+                padding: 1px;
+                background-color: gray;             
+            }
+
+            footer > ul {
+                text-align: center;
+                list-style: none;
+            }
+
+            footer li {
+                color: white;
+                display: inline;
+            }
+
+            footer > ul > li > a {
+                display: none;
+            }
+        }
+
+        /* Desktop screen view*/
+        @media all and (min-width: 1000px) {
+            .rightside {
+                float: right;
+            }
+
+            body {
+                margin: 0%;
+            }
+
+            hr {
+                border: 1px solid rgb(228, 228, 228);
+                margin: 2% 0;
+            }
+
+            .top {
+                display: flex;
+                column-gap: 80%;
+                border-bottom: 0;
+            }
+
+            .top > .name, .top > .searchbar {
+                display: flex;
+                flex-flow: column;
+            }
+
+            .searchbar > input {
+                margin: 11% 0;
+                display: flex;
+                padding: 10px 5%;
+                border: hidden;
+                text-decoration: none;
+                text-align: center;
+                border-radius: 1rem;
+                background-color: rgb(228, 228, 228);
+            }
+    
+            nav {
+                display: block;
+                padding: 1px;
+                background-color:rgb(228, 228, 228);
+            }
+
+            nav > ul {
+                list-style: none;
+                text-align: center;
+            }
+
+            nav > ul > li {
+                padding: 13px;
+                display: inline;
+            }
+
+            nav > ul > li > a {
+                color: coral;
+                text-decoration: none;
+            }
+
+            .posts {
+                margin: 1% 10%;
+                column-gap: 2%;
+                display: flex;
+            }
+
+            .posts > .left, .posts > .right {
+                display: flex;
+                flex-flow: column nowrap;
+            }
+
+            .posts > .left > .post1,
+            .posts > .left > .post2 {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+
+            .posts > .left {
+                margin: 0;
+            }         
+
+            .postImage {
+                margin: 2%;
+                width: 250px;
+                height: 250px;
+                border-radius: 1rem;
+            }
+
+            .postInfo {
+                font-size: 14px;
+            }
+
+            .postInfo > h1 {
+                color: gray;
+                margin: 2% 0 0 0;
+            }
+
+            .authorInfo {
+                color: gray;
+                margin: 2% 0;
+            }
+
+            .button {
+                display: block;
+                font-size: 14px;
+                padding: 0 4%;
+                width: auto;
+                height: 40px;
+                border-radius: 0.25rem;
+                float: left;
+                text-align: center;
+                color: white;
+                background-color: coral;
+            }
+
+            .postInfo .button {
+                line-height: 40px;
+            }
+
+            .postInfo > a {
+                text-decoration: none;
+            }
+
+            .posts > .right {
+                min-height: 800px;
+                font-size: 14px;
+                background-color: rgb(228, 228, 228);
+                border-radius: 1rem;
+                padding: 1.25%;
+                flex: 0 0 33%;
+            }
+
+            .posts > .right > img {
+                width: 100%;
+            }
+
+
+            footer {
+                text-align: left;
+                padding: 5px;
+                color: white;
+                background-color: gray;
+            }
+
+            footer > ul {
+                margin: 0.75rem 0.5rem 0.75rem 0.75rem;
+                padding: 0;
+                list-style: none;
+                text-align: left;
+            }
+
+            footer > ul > li {
+                padding: 0 5px 0 0;
+                display: inline;
+                text-decoration: none;
+            }
+
+            footer > ul > li > a {
+                display: inline;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="top">
+            <div class="name"><h3>Jared Esquivel</h3></div>
+            <div class="searchbar"><input type="text" placeholder="Type to search" class="rightside"></div>      
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="https://www.theonion.com/">Home</a></li>
+                <li><a href="https://www.theonion.com/">Recent posts</a></li>
+                <li><a href="https://www.theonion.com/">Old posts</a></li>
+                <li><a href="https://puginarug.com/">Contact us</a></li>
+                <li><a href="https://www.theonion.com/about">About us</a></li>
+            </ul>
+        </nav>
+
+        <div class="posts">
+            <div class="left">
+                <div class="post1">
+                    <img class="postImage" src="../../images/Red-fox.jpg" alt="An image of a red fox">
+                    
+                    <div class="postInfo">
+                        <h1>First post with image</h1>
+                        <p class="authorInfo"> By Adam Smith, Jan 1 2021</p>
+                        <p><strong>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam expedita, doloremque vero 
+                            voluptatibus nesciunt facilis voluptates enim. Quaerat fugit recusandae voluptate minus, 
+                            laborum enim, necessitatibus dolorum, libero dicta voluptatibus similique. Lorem ipsum 
+                            dolor, sit amet consectetur adipisicing elit. Veritatis sit beatae soluta, eaque velit 
+                            temporibus ipsa odit reiciendis fuga voluptatibus officia officiis fugit ab laborum quae 
+                            cupiditate suscipit aliquam illum!
+                        </strong></p>
+                        <a class="button" href="https://www.theonion.com/kidney-freaking-out-after-waking-up-in-cooler-full-of-i-1850108357">
+                            Read More</a>
+                    </div>  
+                </div>
+
+                <hr>
+
+                <div class="post2">
+                    <img class="postImage" src="../../images/Gecko.jpg" alt="An image of a gecko">
+                    
+                    <div class="postInfo">
+                        <h1>Second post with image</h1>
+                        <p class="authorInfo"> By John Doe, Jan 1 2021</p>
+                        <p><strong>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque modi repudiandae 
+                            consequuntur facere ullam fuga, ipsa est voluptatum saepe maxime assumenda deserunt iusto 
+                            in earum debitis? Nobis, ea natus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Suscipit omnis ad sed, et sit quaerat? Tempora dolores asperiores dignissimos alias voluptatem 
+                            quos, ipsa repudiandae, porro, cum fuga culpa et odit.
+                        </strong></p>
+                        <a class="button" href="https://www.theonion.com/amazon-echo-declares-it-heard-everything-and-it-s-takin-1850071685">
+                            Read More</a>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="right">
+                <h2>Secondary content here</h2>
+                <img src="../../images/Wallaby.jpg" alt="An image of a wallaby">
+                <p><strong>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis excepturi necessitatibus officia! 
+                    Voluptatibus, vel ducimus, quos atque maxime, corporis fugiat debitis a nam unde harum iusto 
+                    ut impedit sapiente eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates 
+                    tenetur eaque, totam eum quis asperiores? Magnam, praesentium consequuntur dolor in aspernatur 
+                    labore, veniam earum iusto, iure ad alias laborum sapiente?
+                </strong></p>
+            </div>
+        </div>
+
+        <footer class="clearfix">
+            <ul>
+                <li><a href="https://facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+                <li class="rightside">&copy; All rights reserved</li>
+            </ul>
+        </footer>
+
+    </main>    
+</body>
+</html>
