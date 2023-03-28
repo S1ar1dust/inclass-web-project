@@ -1,0 +1,49 @@
+Class project idea:
+Yu-Gi-Oh! utilitary sites
+
+My idea that I have for the class project is to make a multi use website based around the Yu-Gi-Oh! trading card game where players can chech on upcoming products from Konami.
+Also the there will be a card database for players to check what cards were from which sets and for upcoming sets for this project I will implete a few of first sets to begin.
+Then I will have a forums page for players to ask questions they have regarding the game. ALso there will be an articles page for players that may want to write something like
+a strategy article or tournament overview. Last there will be a page that displays the current banlist with a dropdown menu to select previous formats banlists.
+
+pg 1: Home page
+pg 2: Card database
+pg 3: Forums
+pg 4: Articles
+pg 5: Banlist(multiple formats)
+
+It must use bootstrap:
+I can implement the use of bootstrap for the formation of the various webpages and to adjust for different sized screens
+
+It must consist of at least five HTML pages:
+The five pages I have currently thought of making is a Home page, Card database, Forums, Articles, and page for the current banlist with an option to allow the user to select a banlist for a older format
+
+The landing page (index.html) must have a top navbar, a jumbotron with a background image, featured content, a footer:
+The home page will contain a jumbotron with a background image of the next to release booster set and a feastured content on the left side to show articles/forums that have had a lot of recent activity. Then every page will contain the a top navigation bar and a footer with copyright information
+
+All pages must be responsive mobile-first with support for small, medium, and large devices (use bootstrap sm, md, and lg breakpoints): 
+This will be easy to implement with the use of bootstrap to change the webpage according to the size of the display width pixel count
+
+It must use the following JavaScript features: functions, objects, arrays, events:
+The card database and banlist webpages will require functions to display card information and arrays to display the cards in an neat organized form
+
+It must use multimedia (images or videos): 
+The webpages that I will make has to use images for the card artwork and can possibly implement videos for current top decks in the game for the latest format
+
+Paragraphs:
+My idea that I have for the class project is to make a multi-use website based around the Yu-Gi-Oh! trading card game where players
+can check on upcoming products from Konami. Also, there will be a card database for players to check what cards were from which sets
+and for upcoming sets for this project I will implement a few of the first sets, to begin with. Then I will have a forums page for
+players to ask questions they have regarding the game. Also, there will be an articles page for players that may want to write
+something like a strategy article or tournament overview. Last, there will be a page that displays the current banlist with a dropdown
+menu to select previous formats banlists.
+
+I can implement the use of bootstrap for the formation of various web pages and to adjust for different-sized screens. Next, the five
+pages I have currently thought of making are a Home page, Card database, Forums, Articles, and a page for the current banlist with an
+option to allow the user to select a banlist for an older format. The home page will contain a jumbotron with a background image of
+the next-to-release booster set and featured content on the left side to show articles/forums that have had a lot of recent activity.
+Then every page will contain a top navigation bar and a footer with copyright information. It should be easy to implement with the use
+of bootstrap to change the webpage according to the size of the display width pixel count. For the card database and banlist web pages,
+they will require the use of functions to display card information and arrays to display the cards in a neatly organized form. Lastly,
+the web pages that I will make have to use images for the card artwork and can possibly implement videos for current top decks in the
+game for the latest format.
